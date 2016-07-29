@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sqli.hack123.me/2016/07/29/hello-hexo/</loc>
+    
+    <lastmod>2016-07-29T15:01:50.620Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sqli.hack123.me/about/index.html</loc>
     
     <lastmod>2016-07-29T14:25:47.039Z</lastmod>
