@@ -22,7 +22,7 @@ body {
   font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 20px; }
+  font-size: 14px; }
 
 .body_container {
   padding: 0 60px;
@@ -215,7 +215,7 @@ div {
       color: #444; }
   .post .post-content {
     clear: left;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.77;
     color: #444;
     padding-top: 15px;
