@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sqli.hack123.me/"/>
-  <updated>2016-07-30T13:25:12.323Z</updated>
+  <updated>2016-07-30T13:29:07.989Z</updated>
   <id>http://sqli.hack123.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://sqli.hack123.me/2016/07/30/About-This-Blog/"/>
     <id>http://sqli.hack123.me/2016/07/30/About-This-Blog/</id>
     <published>2016-07-30T13:14:56.000Z</published>
-    <updated>2016-07-30T13:25:12.323Z</updated>
+    <updated>2016-07-30T13:29:07.989Z</updated>
     
     <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>这是我用hexo新开的一个博客，搭建在Github上，并没有什么特殊的用途，只是想把以前的SQL注入教程搬过来，并且写下去。因为之前只研究过了MySQL的相关注入方法，对其他的数据库可以说是一无所知，所以准备一边研究一边写，顺便给有需要的人提供一份类似tutorial的东西，方便查找吧。</p>
 <p>大概会涉及到以下类型的数据库：</p>
@@ -34,10 +34,11 @@
 </ul>
 <p>那么学习本教程需要掌握哪些基本知识呢？</p>
 <ul>
-<li>最最最简单的PHP开发基础</li>
-<li>数据库相关的增删改查</li>
-<li>最起码你要看得懂代码吧</li>
+<li>最最最简单的PHP开发基础。</li>
+<li>数据库相关的增删改查。</li>
+<li>最起码你要看得懂代码吧。</li>
 </ul>
+<p>如果你是一点安全基础都没有的新手，并不推荐你阅读此书，希望你去学习一些基础知识后再来翻阅，切勿浮沙筑高台。</p>
 <p>那么什么样的人适合看本教程呢？</p>
 <ul>
 <li>如果你是一名开发工程师，想写出安全的代码。</li>
@@ -45,14 +46,16 @@
 <li>如果你是一名白帽子，想找一个快速翻阅的Cheat Sheet</li>
 <li>其他任何你想学习的理由。</li>
 </ul>
+<p>在写作时，我会将本书分为几个部分，以数据库作为分类，每个数据库都会从最简单的显错注入讲到盲注，有些还会出现通过DNS获取数据等。目前大概分为7部分，每部分章节数未定。</p>
 <p>就是这些，由于本教程是我利用业余时间写的，白天要上班，周末要休息，同时还有好几个业余项目等着去做，所以并不能保证更新时间，可能有时候会很久才更新一章。但我尽量把内容讲的简单些，节约大家的时间。同时，本书会不定期同步到gitbook上，方便大家翻阅。</p>
 <p>最后，请大家转载时注明出处与作者，且禁止用于商业用途。</p>
+<p>以上</p>
 <p>lightless 2016年7月30日 于杭州</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;这是我用hexo新开的一个博客，搭建在Github上，并没有什么特殊的用途，只是想把以前的SQL注入教程搬过来，并且写下去。因为之前只研究过
+      这是我用hexo新开的一个博客，搭建在Github上，并没有什么特殊的用途，只是想把以前的SQL注入教程搬过来，并且写下去。
     
     </summary>
     
