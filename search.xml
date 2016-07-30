@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Introduce]]></title>
-      <url>http://sqli.hack123.me/2016/07/30/About-This-Blog/</url>
+      <url>http://sqli.hack123.me/2016/07/30/Introduce/</url>
       <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>这是我用hexo新开的一个博客，搭建在Github上，并没有什么特殊的用途，只是想把以前的SQL注入教程搬过来，并且写下去。因为之前只研究过了MySQL的相关注入方法，对其他的数据库可以说是一无所知，所以准备一边研究一边写，顺便给有需要的人提供一份类似tutorial的东西，方便查找吧。</p>
 <p>大概会涉及到以下类型的数据库：</p>
 <ul>
