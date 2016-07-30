@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sqli.hack123.me/"/>
-  <updated>2016-07-30T14:46:07.000Z</updated>
+  <updated>2016-07-30T14:49:11.181Z</updated>
   <id>http://sqli.hack123.me/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>\[MySQL\] Chapter 1 Environment</title>
+    <link href="http://sqli.hack123.me/articles/MySQL-Chapter-1-Environment/"/>
+    <id>http://sqli.hack123.me/articles/MySQL-Chapter-1-Environment/</id>
+    <published>2016-07-30T13:22:56.000Z</published>
+    <updated>2016-07-30T14:49:11.181Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="0-1-什么是SQL注入"><a href="#0-1-什么是SQL注入" class="headerlink" title="0.1 什么是SQL注入"></a>0.1 什么是SQL注入</h2><p>在学习之前，也许大家已经听说过这个名词，多少有些熟悉，在这里简单介绍一下，所以放到了第0章，一切的开始。<br>到底什么才是SQL注入呢？如果你去google搜索的话，一定会看到很多很官方的东西，看着很厉害的样子，但是看了半天也看不懂。啥？如果你看懂了。那应该不用看这个教程了。</p>
+<p>我们就用PHP+MySQL来举例吧，假如你来写一个简单的新闻站，你会提供什么样的功能呢？首先作为新闻站，用户必须具有查看某条新闻的功能。用户告诉你（的程序）说：“hi~我想看第59条新闻！”，你（的程序）就会从数据库中取出第59条新闻回复给浏览器，浏览器再显示给用户。看起来很简单，我们用程序来描述一下这个过程。</p>
+<p>用户访问：<a href="http://news.lightless.me/show.php?id=59" target="_blank" rel="external">http://news.lightless.me/show.php?id=59</a> （“hi~我想看第59条新闻”）<br>这个show.php就会从数据库中取出第59条新闻返回给用户。其中的处理语句可能是这样的：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$id = $_GET[<span class="string">'id'</span>]; <span class="comment">// id为：59</span></div><div class="line">$result = mysql_query(<span class="string">"SELECT * FROM news WHERE news_id=$id"</span>); <span class="comment">// 此时$id为59，于是下面的SQL语句就变成了下面的样子：</span></div><div class="line">SELECT * FROM news WHERE news_id = <span class="number">59</span></div></pre></td></tr></table></figure></p>
+<p>一切看起来都挺正常的，但是我们知道，现实中除了男人和女人还有第三种人，那就是熊孩子。此时有个熊孩子说：“我要看第60条新闻并且删除数据库”。于是你的程序就按照接收到的数据去执行了。可能处理语句就变成了:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$id = $_GET[<span class="string">'id'</span>];  <span class="comment">// 此时$id为：60 and drop db_news</span></div><div class="line">$result = mysql_query(<span class="string">"SELECT * FROM news WHERE news_id=$id"</span>);</div><div class="line">SELECT * FROM news WHERE news_id = <span class="number">60</span> <span class="keyword">and</span> drop db_news</div></pre></td></tr></table></figure></p>
+<p>于是你的程序高兴的执行了这个语句，因为你的程序并不能正确的区分哪里是指令哪里是数据，按照你的设想，”60 and drop db_news”都应该当做数据的一部分而不是指令，但是你的程序却自作聪明的将and后面的内容当做指令执行了，这样一来你的数据库就GG了。</p>
+<p>看了上面的例子，大家应该明白什么叫做SQL注入了吧。如果你想看更官方的解释，可以自行google一下看看，相信你会看懂一部分的。下面我们从PHP+MySQL的情况开始学习SQL注入，我个人认为这是最常见，而且最容易入门的情况，所以尽量将内容简单化，让每一个人都能看明白。</p>
+<p><img src="http://ob4sq5v1w.bkt.clouddn.com/Part/I/Mysql/5.jpg" alt="带有SQL注入的车牌号"></p>
+<p>上面这个图应该是个段子，但是生动的体现了SQL注入XD</p>
+<h2 id="1-1-安装环境"><a href="#1-1-安装环境" class="headerlink" title="1.1 安装环境"></a>1.1 安装环境</h2><p>首先我们要自己配一套SQL注入环境来学习，不能到网上四处去乱来，会被带走的：），而且实际环境中的SQL注入总会遇到各种各样的问题，比如无法注出数据啊，被WAF拦截了啊之类的，还影响我们自己的学习，效果很不好。</p>
+<p>在Windows上，我推荐使用XAMPP或者是WAMP来搭建WEB服务器，一键安装，无需配置，包括Apache、PHP、MySQL。毕竟我们学习的是SQL注入而不是如何配置环境，不要舍本逐末。具体的安装过程不在这里讲了，如果你还不能安装好环境，说明你还不适合阅读本书。</p>
+<p><img src="http://ob4sq5v1w.bkt.clouddn.com/Part/I/Mysql/1.png" alt="XAMPP 官网"></p>
+<p>XAMPP 官网</p>
+<p><img src="http://ob4sq5v1w.bkt.clouddn.com/Part/I/Mysql/2.png" alt="WAMP官网"></p>
+<p>WAMP 官网</p>
+<p>有了WEB环境，我们还需要找一套有漏洞的程序供我们练习，这里推荐一个，github地址：<a href="https://github.com/Audi-1/sqli-labs" target="_blank" rel="external">https://github.com/Audi-1/sqli-labs</a> ，这个是专门一套练习SQL注入的程序，不过要注意的是，这个程序中PHP连接MySQL时使用的是mysql_connect，而PHP7及以上默认已经不支持通过mysql连接了，只支持mysqli，所以上面安装环境的时候，尽量不要选择PHP7的环境（或者自己手动将sqli-labs中的数据库连接方式改掉，工作量很大，不推荐）。</p>
+<h2 id="1-2-安装SQLi-Labs"><a href="#1-2-安装SQLi-Labs" class="headerlink" title="1.2 安装SQLi-Labs"></a>1.2 安装SQLi-Labs</h2><p>我们这里使用wamp来进行后续的实验，现将SQLi-Labs的源码下载回WEB目录。<br>然后从浏览器访问，当然前提是你要把Web Server跑起来。</p>
+<p><img src="http://ob4sq5v1w.bkt.clouddn.com/Part/I/Mysql/3.png" alt="SQLi-Labs首页"><br>如果你成功的看到了这个页面，说明Web服务已经正常了，接下来我们去安装数据库。首先你要在<code>sql-connection/db-creds.inc</code>中将账号密码替换成自己的。<br>然后我们点击第二项，<code>Setup/reset Database for labs</code>来安装相关的数据库。接下来你会看到安装是否成功的提示，如果出现问题可以自己debug一下，并不会出现什么复杂的原因。</p>
+<p>如果安装成功后，我们可以访问一下第一个练习题目：<a href="http://127.0.0.1/sqli-labs/Less-1/?id=2" target="_blank" rel="external">http://127.0.0.1/sqli-labs/Less-1/?id=2</a> 如果没有提示任何Error，并且<code>login name</code>是Angelina，<code>password</code>是I-kill-you，那么就算是安装成功了。</p>
+<p><img src="http://ob4sq5v1w.bkt.clouddn.com/Part/I/Mysql/4.png" alt="安装成功"></p>
+<p>以上</p>
+<p><strong> 转载请注明出处，且禁止用于商业用途。 </strong></p>
+<p>lightless, 2016-07-30, 于杭州</p>
+]]></content>
+    
+    <summary type="html">
+    
+      我们的一位伟大先贤曾经说过一句话，“好的开始是成功的一半”，她就是孙小美。
+    
+    </summary>
+    
+      <category term="Part-I-MySQL" scheme="http://sqli.hack123.me/categories/Part-I-MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://sqli.hack123.me/tags/MySQL/"/>
+    
+      <category term="Environment" scheme="http://sqli.hack123.me/tags/Environment/"/>
+    
+  </entry>
   
   <entry>
     <title>Introduce</title>
