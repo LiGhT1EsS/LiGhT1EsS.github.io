@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://sqli.hack123.me/archives/Introduce/</loc>
+    <loc>http://sqli.hack123.me/articles/Introduce/</loc>
     
     <lastmod>2016-07-30T13:29:56.571Z</lastmod>
     
@@ -16,7 +16,7 @@
   </url>
   
   <url>
-    <loc>http://sqli.hack123.me/archives/hello-world/</loc>
+    <loc>http://sqli.hack123.me/articles/hello-world/</loc>
     
     <lastmod>2016-07-29T12:58:47.153Z</lastmod>
     

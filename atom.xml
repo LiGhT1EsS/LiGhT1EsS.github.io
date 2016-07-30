@@ -17,8 +17,8 @@
   
   <entry>
     <title>Introduce</title>
-    <link href="http://sqli.hack123.me/archives/Introduce/"/>
-    <id>http://sqli.hack123.me/archives/Introduce/</id>
+    <link href="http://sqli.hack123.me/articles/Introduce/"/>
+    <id>http://sqli.hack123.me/articles/Introduce/</id>
     <published>2016-07-30T13:14:56.000Z</published>
     <updated>2016-07-30T13:29:56.571Z</updated>
     
@@ -68,8 +68,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://sqli.hack123.me/archives/hello-world/"/>
-    <id>http://sqli.hack123.me/archives/hello-world/</id>
+    <link href="http://sqli.hack123.me/articles/hello-world/"/>
+    <id>http://sqli.hack123.me/articles/hello-world/</id>
     <published>2016-07-29T12:58:47.135Z</published>
     <updated>2016-07-29T12:58:47.153Z</updated>
     
