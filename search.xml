@@ -4,9 +4,34 @@
   
     
     <entry>
-      <title><![CDATA[hello hexo]]></title>
-      <url>http://sqli.hack123.me/2016/07/29/hello-hexo/</url>
-      <content type="html"><![CDATA[<p>中文测试<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> os</div><div class="line"></div><div class="line"><span class="keyword">print</span> os.path</div></pre></td></tr></table></figure></p>
+      <title><![CDATA[About This Blog]]></title>
+      <url>http://sqli.hack123.me/2016/07/30/About-This-Blog/</url>
+      <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>这是我用hexo新开的一个博客，搭建在Github上，并没有什么特殊的用途，只是想把以前的SQL注入教程搬过来，并且写下去。因为之前只研究过了MySQL的相关注入方法，对其他的数据库可以说是一无所知，所以准备一边研究一边写，顺便给有需要的人提供一份类似tutorial的东西，方便查找吧。</p>
+<p>大概会涉及到以下类型的数据库：</p>
+<ul>
+<li>MySQL</li>
+<li>MSSQL</li>
+<li>Oracle</li>
+<li>SQLite</li>
+<li>PostgreSQL</li>
+<li>NoSQL(MongoDB, etc.)</li>
+</ul>
+<p>那么学习本教程需要掌握哪些基本知识呢？</p>
+<ul>
+<li>最最最简单的PHP开发基础</li>
+<li>数据库相关的增删改查</li>
+<li>最起码你要看得懂代码吧</li>
+</ul>
+<p>那么什么样的人适合看本教程呢？</p>
+<ul>
+<li>如果你是一名开发工程师，想写出安全的代码。</li>
+<li>如果你是一名信息安全相关的从业者，想学习更多的注入相关的知识。</li>
+<li>如果你是一名白帽子，想找一个快速翻阅的Cheat Sheet</li>
+<li>其他任何你想学习的理由。</li>
+</ul>
+<p>就是这些，由于本教程是我利用业余时间写的，白天要上班，周末要休息，同时还有好几个业余项目等着去做，所以并不能保证更新时间，可能有时候会很久才更新一章。但我尽量把内容讲的简单些，节约大家的时间。同时，本书会不定期同步到gitbook上，方便大家翻阅。</p>
+<p>最后，请大家转载时注明出处与作者，且禁止用于商业用途。</p>
+<p>lightless 2016年7月30日 于杭州</p>
 ]]></content>
     </entry>
     
