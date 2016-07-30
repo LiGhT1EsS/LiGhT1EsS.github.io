@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[\[MySQL\] Chapter 1 Environment]]></title>
+      <title><![CDATA[[MySQL] Chapter 1 Environment]]></title>
       <url>http://sqli.hack123.me/articles/MySQL-Chapter-1-Environment/</url>
       <content type="html"><![CDATA[<h2 id="0-1-什么是SQL注入"><a href="#0-1-什么是SQL注入" class="headerlink" title="0.1 什么是SQL注入"></a>0.1 什么是SQL注入</h2><p>在学习之前，也许大家已经听说过这个名词，多少有些熟悉，在这里简单介绍一下，所以放到了第0章，一切的开始。<br>到底什么才是SQL注入呢？如果你去google搜索的话，一定会看到很多很官方的东西，看着很厉害的样子，但是看了半天也看不懂。啥？如果你看懂了。那应该不用看这个教程了。</p>
 <p>我们就用PHP+MySQL来举例吧，假如你来写一个简单的新闻站，你会提供什么样的功能呢？首先作为新闻站，用户必须具有查看某条新闻的功能。用户告诉你（的程序）说：“hi~我想看第59条新闻！”，你（的程序）就会从数据库中取出第59条新闻回复给浏览器，浏览器再显示给用户。看起来很简单，我们用程序来描述一下这个过程。</p>
